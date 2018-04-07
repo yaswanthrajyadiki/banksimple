@@ -25,7 +25,7 @@ SECRET_KEY = 'g#y8bwrx@2!qszcl^98svw@jq#)z+_(^0sc6@y9i%fb+_d_)^u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cf-dango.apps.hack2hire.net', 'localhost', 'banksimple.apps.hack2hire.net']
 
 
 # Application definition
@@ -119,3 +119,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

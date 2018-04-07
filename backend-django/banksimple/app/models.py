@@ -40,3 +40,5 @@ class Appointment(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     rm = models.ForeignKey(RelationshipManager)
+    status = models.TextField()
+

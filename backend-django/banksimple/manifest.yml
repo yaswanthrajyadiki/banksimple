@@ -1,0 +1,6 @@
+---
+applications:
+- name: banksimple
+  instances: 1
+  memory: 128M
+  command: null

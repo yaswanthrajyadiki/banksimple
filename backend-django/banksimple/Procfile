@@ -1,0 +1,1 @@
+web: gunicorn banksimple.wsgi --workers 2
