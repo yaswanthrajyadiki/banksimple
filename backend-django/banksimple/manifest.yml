@@ -1,6 +1,6 @@
 ---
 applications:
-- name: banksimple
+- name: cf-dango
   instances: 1
   memory: 128M
   command: null

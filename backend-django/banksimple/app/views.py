@@ -37,8 +37,14 @@ class UserAPI(APIView):
                 user = serializer.save()
                 if user:
                     return Response({"status": status.HTTP_200_OK, "message": "User was successfully created."})
+                else:
+                    return Response({"status": status.HTTP_400_BAD_REQUEST,
+                                     "error": "User was not created"})
+            else:
+                return Response({"status": status.HTTP_400_BAD_REQUEST,
+                             "error": "User was not created because of following errors %s" % serializer.errors})
         except Exception as e:
-            return Response({"status": status.HTTP_400_BAD_REQUEST, "branches": [], "error": e.message})
+            return Response({"status": status.HTTP_400_BAD_REQUEST, "error": e.message})
 
 
 class BranchAPI(APIView):
